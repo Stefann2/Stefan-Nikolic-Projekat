@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Moj sajt</title>
+<link rel="stylesheet" href="stylemoj.css" >
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<noscript>
+<link rel="stylesheet" href="css/5grid/core.css" />
+<link rel="stylesheet" href="css/5grid/core-desktop.css" />
+<link rel="stylesheet" href="css/5grid/core-1200px.css" />
+<link rel="stylesheet" href="css/5grid/core-noscript.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/style-desktop.css" />
+</noscript>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="css/5grid/init.js?use=mobile,desktop,1000px&amp;mobileUI=1&amp;mobileUI.theme=none"></script>
+  <script>
+var oof=0;
+var off=0;
+  function ono(){
+  var ime1=document.getElementById("prvoi").value;
+  var ime2=document.getElementById("drugoi").value;
+  var x = document.getElementById("prvi").value;
+  var y = x.split(" ");
+  x=y.toString();
+  for(i=0;i<x.length;i++)
+  {
+    if(x[i]!="-")
+   oof+=parseInt(x[i]);
+  }
+
+  x = document.getElementById("drugi").value;
+  y = x.split(" ");
+  x=y.toString();
+  for(i=0;i<x.length;i++)
+  {
+    if(x[i]!="-")
+   off+=parseInt(x[i]);
+ }
+ while(oof>=10){
+oof=(oof-oof%10)/10+oof%10;
+}
+while(off>=10){
+off=(off-off%10)/10+off%10;
+}
+if(oof>off){
+document.getElementById("div1").innerHTML=ime1;
+document.getElementById("div3").innerHTML=Math.round(off/oof*100) + "%";
+document.getElementById("div2").innerHTML=ime2;
+}
+else
+{
+document.getElementById("div1").innerHTML=ime1;
+document.getElementById("div3").innerHTML=Math.round(oof/off*100) + "%";
+document.getElementById("div2").innerHTML=ime2;
+}
+}
+ </script>
+<!--[if IE 9]><link rel="stylesheet" href="css/style-ie9.css" /><![endif]-->
+</head><body>
+<div id="wrapper">
+	<div id="header-wrapper">
+		<header id="header">
+			<div class="5grid-layout">
+				<div class="row">
+					<div class="12u" id="logo"> <!-- Logo -->
+						<h1><a href="#" class="mobileUI-site-name">Koliko se vole?</a></h1>
+					</div>
+				</div>
+			</div>
+			<div class="5grid-layout">
+				<div class="row">
+					<div class="12u" id="menu">
+						<div id="menu-wrapper">
+							<nav class="mobileUI-site-nav">
+								<ul>
+									<li class="current_page_item"><a href="index.html">Homepage</a></li>
+									<li><a href="threecolumn.html">O autoru</a></li>
+									<li><a href="twocolumn1.html">Kontakt</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+	<div id="page-wrapper" class="5grid-layout">
+		<div class="5grid-layout">
+			<div class="row">
+				<div class="12u">
+					<div id="banner"><a href="#"><img id="slika"src="slika.jpg" alt=""></a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<form class="forma1">
+	Ime 1. osobe<br>
+	<input id="prvoi" type="text" ><br>
+	Datum rodjenja 1. osobe<br>
+	<input id="prvi" type="date" ><br>
+	</form>
+	<form class="forma2">
+	Ime 2. osobe<br>
+	<input id="drugoi" type="text" ><br>
+	Datum rodjenja 2. osobe<br>
+	<input id="drugi" type="date" ><br>
+	</form>
+	<button class="dugme"type="button" onclick="ono()">Klikni</button>
+	<div id="div">
+	<div id="div1"></div>
+	<div id="div3"></div>
+	<img id="lmao"src="srca.png">
+	<div id="div2"></div>
+	</div>
+</div>
+<div id="copyright" class="5grid-layout">
+	<section>
+		<p>&copy; Koliko se vole | Images: <a href="http://fotogrph.com/">Fotogrph</a> | Design: <a href="http://templated.co/">TEMPLATED</a> | Made by Stefan 2019</p>
+	</section>
+</div>
+</body>
+</html>

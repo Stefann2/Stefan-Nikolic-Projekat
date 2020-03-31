@@ -1,0 +1,9 @@
+#div{position:relative; left:35%;top:-50px;}
+#lmao{z-index:-1;}
+#div1{position:relative;top:320px;left:50px;font-size:30px;z-index:1;color:black;}
+#div2{position:relative;top:-350px;left:450px;font-size:30px;z-index:1;color:black;}
+#div3{position:relative;top:280px;left:260px;font-size:30px;z-index:1;color:#d12121;background-color:black;width:60px;}
+#slika{width:150px;height:300px;}
+.forma1{position:relative;margin-left:20px;top:10px;color:black;}
+.forma2{position:relative;left:90%;top:-50px;color:black;}
+.dugme{position:relative;font-size:20px;left:900px;bottom:100px;}
